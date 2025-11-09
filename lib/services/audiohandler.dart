@@ -27,10 +27,12 @@ final audioHandlerProvider = FutureProvider<MyAudioHandler>((ref) async {
     config: const AudioServiceConfig(
       androidNotificationChannelId: 'com.app.tunelo.channel.audio',
       androidNotificationChannelName: 'Tunelo Audio Player',
-      androidNotificationIcon: 'drawable/ic_launcher_foreground',
+      androidNotificationChannelDescription: 'Controls audio playback',
+      androidNotificationIcon: 'drawable/ic_notification',
+      androidNotificationOngoing: true,
       androidShowNotificationBadge: true,
       androidResumeOnClick: true,
-      // androidStopForegroundOnPause: false,
+      notificationColor: Color(0xFF2196F3),
     ),
   );
   return handler;
